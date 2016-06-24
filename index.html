@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="router.js"></script>
+	<title>Router Test Case</title>
+</head>
+<body>
+	<ul>
+		<li><a href="#/">white</a></li>
+		<li><a href="#/green">green</a></li>
+		<li><a href="#/yellow">yellow</a></li>
+		<li><a href="#/red">red</a></li>
+		<li><a href="#/pink">pink</a></li>
+	</ul>
+	<script type="text/javascript">
+		var body = document.querySelector('body');
+		function changeBodyColor(color) {
+			body.style.backgroundColor = color;
+		}
+		Router.route('/', function() {
+			changeBodyColor('white');
+		});
+		Router.route('/green', function() {
+			changeBodyColor('green');
+		});
+		Router.route('/yellow', function() {
+			changeBodyColor('yellow');
+		});
+		Router.route('/red', function() {
+			changeBodyColor('red');
+		});
+		Router.route('/pink', function() {
+			changeBodyColor('pink');
+		});
+	</script>
+</body>
+</html>
